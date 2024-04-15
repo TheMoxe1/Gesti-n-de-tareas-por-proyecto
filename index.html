@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Project Manager</h1>
+    <form id="addProjectForm">
+      <input type="text" id="projectName" placeholder="Nombre del Proyecto" required>
+      <input type="text" id="projectDescription" placeholder="Descripción del Proyecto">
+      <button type="submit">Agregar Proyecto</button>
+    </form>
+    <div id="projects"></div>
+  </div>
+
+  <div class="search-container">
+    <form id="searchTaskForm">
+      <input type="date" id="searchDueDate" placeholder="Fecha de vencimiento">
+      <button type="submit" id="searchTaskBtn">Buscar</button>
+    </form>
+  </div>
+  
+  <div id="searchResults"></div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form id="addTaskForm">
+        <input type="text" id="taskDescription" placeholder="Descripción de la tarea" required>
+        <input type="date" id="dueDate" placeholder="Fecha de vencimiento (opcional)">
+        <button type="submit" id="addTaskBtn">Agregar Tarea</button>
+        <button type="button" class="cancel-btn">Cancelar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
